@@ -44,3 +44,6 @@
 
 ### _Note_
 sha can be every commit sha, beside last one, because with reset we moving head into selected sha, but we can't revert it in last because we every time will be in last sha 
+
+`git revert <sha>`:
+- adding new commit, and revert all changes to selected commit sha state in remote 
