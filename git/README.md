@@ -41,3 +41,6 @@
 
 `git reset --hard HEAD~1 or sha`:
 - with `--hard` flag we remove the commit(s) and all our changes will be dissapeared
+
+### _Note_
+sha can be every commit sha, beside last one, because with reset we moving head into selected sha, but we can't revert it in last because we every time will be in last sha 
