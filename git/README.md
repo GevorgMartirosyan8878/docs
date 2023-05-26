@@ -32,3 +32,12 @@
 
 `git reset HEAD~<number>` or `git reset HEAD^`:
 - will remove commit and will move changes into unstaged area, _number_ represent how many commits we need to go back, and also the symbole ^ represents the same, if want to move HEAD back 1 commit ^ in 2 ^^ and so on.
+
+`git reset --soft HEAD~1 or sha`:
+- with `--soft` flag we remove the commit(s) and all our changes will be moved into index (staging area)
+
+`git reset --mixed HEAD~1 or sha`:
+- with `--mixed` flag we remove the commit(s) and all our changes will be moved into unstaged area
+
+`git reset --hard HEAD~1 or sha`:
+- with `--hard` flag we remove the commit(s) and all our changes will be dissapeared
