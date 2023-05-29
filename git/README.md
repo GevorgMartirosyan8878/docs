@@ -47,3 +47,30 @@ sha can be every commit sha, beside last one, because with reset we moving head 
 
 `git revert <sha>`:
 - adding new commit, and revert all changes to selected commit sha state in remote 
+
+`git checkout <branch name>`:
+- checkout into existing branch, which name we are passed
+
+- `git checkout -b <branch name>`:
+- checkout into existing branch, if there is no branch with passed name, will create new one and will checkout into it
+
+### Conflict solving
+When we are trying to merge branches, there can be conflicts, git by own can't solve that issue, thats why we are getting conflicts, after it in our code we will see following symbols
+
+<<<<<<<<<<< HEAD
+
+some code here
+
+==========
+
+other code
+
+\>>>>>>>>>>> (branch name)
+
+In _**HEAD**_ section we will se our branch code, in which we currently working
+
+and
+
+in (branch name) section we will see the other branch code which exists in same line in other branch which we are trying to merge to our branch
+
+after fixing conflicts manually (just need to remove symbols, then keep both code or maybe remove which part is not necessary), we can run command `git status` and it will say, if you want to cancel everything run `git merge --abort` command or just commit new changes 
