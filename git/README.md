@@ -51,7 +51,7 @@ sha can be every commit sha, beside last one, because with reset we moving head 
 `git checkout <branch name>`:
 - checkout into existing branch, which name we are passed
 
-- `git checkout -b <branch name>`:
+`git checkout -b <branch name>`:
 - checkout into existing branch, if there is no branch with passed name, will create new one and will checkout into it
 
 ### Conflict solving
@@ -74,3 +74,10 @@ and
 in (branch name) section we will see the other branch code which exists in same line in other branch which we are trying to merge to our branch
 
 after fixing conflicts manually (just need to remove symbols, then keep both code or maybe remove which part is not necessary), we can run command `git status` and it will say, if you want to cancel everything run `git merge --abort` command or just commit new changes 
+
+`git rebase <branch name>`:
+- so let's a bit imagine we have 2 branches, main and feature, in main we have a three commits (a, b, c), and after we just checkout (create) into new feature branch, and do some commits, in that time in main branch we have two more commits (d, e), but our feature branch created from c commit, and head now is in the c commit (on master branch), `rebase` just moves head into last commit and bring changes into our current branch without merging
+recommended to use locally to not modify history
+
+`git cherry-pick <sha1> <sha2> <sha3>`:
+- cherry-pick commands just bring mentioned commits from other branches into our branch, and as a result we have new features on our branch without merging them, if there is some conflict we need solve them, then run `git add` command, and after it run `git cherry-pick --continue` 
