@@ -81,3 +81,32 @@ recommended to use locally to not modify history
 
 `git cherry-pick <sha1> <sha2> <sha3>`:
 - cherry-pick commands just bring mentioned commits from other branches into our branch, and as a result we have new features on our branch without merging them, if there is some conflict we need solve them, then run `git add` command, and after it run `git cherry-pick --continue` 
+
+`git tag <tag name>`:
+- we can tag our commits with tag names
+`git tag -list`:
+- show all tags 
+`git push --tags`:
+- show all tag names
+`git checkout ver1`:
+- we can use tag name to checkout branch
+
+
+`git stash save "description"`: 
+- git stash save savin our changes into memory, if we won't want nor loose nor commit our changes
+`git stash list`:
+- show all stashes with their description and uniq identifier like this stash@{0}
+`git stash pop`:
+- bring changes back and remove from stash
+`git stash apply`:
+- bring them back and leave in stash
+`git stash drop`:
+- remove stash with specific stash@{0} identifier
+
+
+`git remote -v`:
+- shows from where we fetch and where we push the changes
+`git remote remove origin`: 
+- delete remote repo 
+`git remote add origin <link>`:
+- when we add and push changes intonew empty repository, all changes commites, histories will be recovered 
