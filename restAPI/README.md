@@ -66,6 +66,12 @@ send to the client only as a reaction to the client request. Server just the sit
 which waiting for client requests. The server does not start sending information 
 about state of some recourses on its own
 
+**Stateless**:</br>
+We can say that stateless means the server does not remember anything about the user who uses the API.
+Communication between client and server must be stateless. This means that every request
+from client to server must contain all necessary information to handle data and server
+shouldn't keep any information about prev or any request
+
 **Layered system**:</br>
 Between client who request representation for recourse state and the server
 who send the response back, there can be a number of servers in the middle,
